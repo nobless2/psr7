@@ -3,7 +3,6 @@
 namespace Tests\Framework\Http;
 
 use Framework\Http\Request;
-use PHPUnit\Framework\TestCase;
 
 class RequestTest
 {

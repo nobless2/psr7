@@ -2,6 +2,7 @@
 
 namespace Tests\Framework\Http;
 
+use Framework\Http\Response;
 use PHPUnit\Framework\TestCase;
 
 class ResponseTest extends TestCase
@@ -10,7 +11,7 @@ class ResponseTest extends TestCase
     {
         $response = new Response($body = 'Body');
 
-        self::assertEquals($body, $response->getBody());
+        self::assertEquals($body, $response->getBody()->getContents());
         self::assertEquals(200, $response->getStatusCode());
         self::assertEquals('OK', $response->getReasonPhrase());
     }
